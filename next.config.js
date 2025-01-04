@@ -2,9 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'export',  // This enables static export
-  // Uncomment and modify the following line if you're deploying to a subdirectory
-  // basePath: '/bird-game',
+  // Ensure images from GitHub are allowed
+  images: {
+    domains: ['github.githubassets.com'],
+  },
 }
 
 module.exports = nextConfig
