@@ -4,9 +4,14 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <header className="flex justify-between items-center p-3 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg">
-      <Link href="/" className="text-xl font-bold tracking-wider hover:text-purple-200 transition-colors">
+      <a
+        href="https://saswatpatra.carrd.co/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-xl font-bold tracking-wider hover:text-purple-200 transition-colors"
+      >
         Saswat Patra
-      </Link>
+      </a>
       <a
         href="https://github.com/saswatpatra/Chidiya-Udd"
         target="_blank"
