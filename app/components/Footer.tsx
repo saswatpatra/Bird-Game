@@ -6,8 +6,14 @@ export default function Footer() {
     <footer className="bg-[#3d405b] text-white py-2 px-4 border-t border-[#577590] mt-auto">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-sm sm:text-base">
-          <Link href="https://saswatpatra.carrd.co/" target="_blank" rel="noopener noreferrer" className="hover:underline">
-            With ❤️ <span className="underline">Saswat Patra</span>
+          With ❤️{' '}
+          <Link
+            href="https://saswatpatra.carrd.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-[#fee440] transition-colors"
+          >
+            Saswat Patra
           </Link>
         </div>
         <div className="flex items-center text-sm sm:text-base">
@@ -17,6 +23,7 @@ export default function Footer() {
             alt="v0 logo"
             width={20}
             height={20}
+            unoptimized
           />
         </div>
       </div>
