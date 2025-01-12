@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="flex items-center">
           <span className="mr-2">Made using</span>
           <Image
-            src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/v0.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/v0-y9saCryUoB1WXM18v3pOaaoiMaItpT.webp"
             alt="v0 logo"
             width={24}
             height={24}
