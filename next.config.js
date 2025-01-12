@@ -2,10 +2,23 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // Ensure images from GitHub are allowed
+  output: 'standalone',
   images: {
-    domains: ['github.githubassets.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'v0.blob.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'github.githubassets.com',
+        pathname: '/images/**',
+      }
+    ],
   },
+  // Uncomment and modify the following line if you're deploying to a subdirectory
+  // basePath: '/bird-game',
 }
 
 module.exports = nextConfig
