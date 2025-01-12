@@ -20,7 +20,7 @@ export default function CountdownScreen({ onCountdownEnd }: CountdownScreenProps
 
   return (
     <div className="flex items-center justify-center">
-      <div className="text-8xl font-bold text-purple-400 animate-pulse">
+      <div className="text-8xl font-bold text-[#3d405b] animate-bounce">
         {count}
       </div>
     </div>
