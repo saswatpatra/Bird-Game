@@ -94,25 +94,25 @@ export default function GameScreen({
 
   if (isGameOver) {
     return (
-      <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-8 shadow-lg text-center relative">
+      <div className="bg-[#16213e] bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-8 shadow-lg text-center relative">
         {showHighScorePopup && (
-          <div className="absolute top-0 left-0 right-0 bg-yellow-500 text-white py-2 px-4 rounded-t-lg animate-bounce">
+          <div className="absolute top-0 left-0 right-0 bg-[#d90429] text-[#fffffc] py-2 px-4 rounded-t-lg animate-bounce">
             <p className="text-2xl font-bold">New High Score: {finalScore}</p>
           </div>
         )}
-        <h2 className="text-4xl font-semibold mb-6 text-indigo-300">Game Over!</h2>
-        <p className="text-2xl mb-4 text-gray-300">Final Score: <span className="text-purple-400 font-semibold">{finalScore}</span></p>
-        <p className="text-2xl mb-8 text-gray-300">High Score: <span className="text-purple-400 font-semibold">{highScore}</span></p>
+        <h2 className="text-4xl font-semibold mb-6 text-[#FBFF00]">Game Over!</h2>
+        <p className="text-2xl mb-4 text-[#f1f1f1]">Final Score: <span className="text-[#FBFF00] font-semibold">{finalScore}</span></p>
+        <p className="text-2xl mb-8 text-[#f1f1f1]">High Score: <span className="text-[#FBFF00] font-semibold">{highScore}</span></p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <button
             onClick={onPlayAgain}
-            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-purple-600 text-white rounded-full text-base sm:text-lg font-semibold hover:bg-purple-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap"
+            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#fee440] text-[#16213e] rounded-full text-base sm:text-lg font-semibold hover:bg-[#ffd23f] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap"
           >
             Play Again
           </button>
           <button
             onClick={goToHome}
-            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-indigo-600 text-white rounded-full text-base sm:text-lg font-semibold hover:bg-indigo-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#0f3460] text-[#f1f1f1] rounded-full text-base sm:text-lg font-semibold hover:bg-[#16213e] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Home
           </button>
@@ -122,16 +122,16 @@ export default function GameScreen({
   }
 
   return (
-    <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-8 shadow-lg text-center">
-      <h2 className="text-4xl font-semibold mb-6 text-indigo-300">{word}</h2>
-      <p className="text-2xl mb-8 text-gray-300">Score: <span className="text-purple-400 font-semibold">{score}</span></p>
+    <div className="bg-[#16213e] bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-8 shadow-lg text-center">
+      <h2 className="text-4xl font-semibold mb-6 text-[#ffd700]">{word}</h2>
+      <p className="text-2xl mb-8 text-[#f1f1f1]">Score: <span className="text-[#f9a825] font-semibold">{score}</span></p>
       <button
         onClick={handleBirdClick}
-        className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4"
+        className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#fee440] text-[#16213e] rounded-full text-lg font-semibold hover:bg-[#ffd700] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4"
       >
         Bird
       </button>
-      <p className="text-xl text-gray-300">High Score: <span className="text-purple-400 font-semibold">{highScore}</span></p>
+      <p className="text-xl text-[#f1f1f1]">High Score: <span className="text-[#f9a825] font-semibold">{highScore}</span></p>
     </div>
   )
 }
