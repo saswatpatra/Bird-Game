@@ -4,18 +4,13 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <header className="flex justify-between items-center p-3 h-16 bg-[#3d405b] text-[#ffffff] shadow-lg">
-      <a
-        href="https://saswatpatra.carrd.co/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-xl font-bold tracking-wider hover:text-[#ffffff] transition-colors"
-      >
-        Saswat Patra
-      </a>
+      <Link href="/" className="text-xl font-extrabold tracking-wider hover:text-[#ffffff] transition-colors">
+        Bird Tap
+      </Link>
       <a
         href="https://github.com/saswatpatra/Chidiya-Udd"
         target="_blank"
-        rel="no opener noreferrer"
+        rel="noopener noreferrer"
         className="flex items-center gap-2 px-3 py-1 bg-[#577590] rounded-full hover:bg-[#577590] transition-all duration-300 ease-in-out transform hover:scale-105 shadow-md"
       >
         <Image
