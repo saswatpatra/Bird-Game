@@ -16,7 +16,15 @@ export default function Footer() {
             Saswat Patra
           </Link>
         </div>
-        <div className="flex items-center text-sm sm:text-base order-1 sm:order-2">
+        <div className="text-sm sm:text-base order-3 sm:order-2">
+          <Link
+            href="/documentation"
+            className="underline hover:text-[#fee440] transition-colors"
+          >
+            Documentation
+          </Link>
+        </div>
+        <div className="flex items-center text-sm sm:text-base order-1 sm:order-3">
           <span className="mr-2">Made using</span>
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/v0-y9saCryUoB1WXM18v3pOaaoiMaItpT.webp"
