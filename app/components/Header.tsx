@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="flex justify-between items-center p-3 h-16 bg-[#3d405b] text-[#ffffff] shadow-lg">
       <Link href="/" className="text-xl font-extrabold tracking-wider hover:text-[#ffffff] transition-colors">
-        Bird Tap
+        Bird Tap Game
       </Link>
       <a
         href="https://github.com/saswatpatra/Chidiya-Udd"
