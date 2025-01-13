@@ -60,6 +60,11 @@ export default function GameContainer() {
     router.push('/')
   }
 
+  const resetScore = () => {
+    setHighScore(0)
+    localStorage.setItem('highScore', '0')
+  }
+
   return (
     <>
       {gameState === 'home' && <HomeScreen onStartGame={startGame} />}
