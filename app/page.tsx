@@ -13,7 +13,9 @@ export default function BirdGame() {
           <GameContainer />
         </div>
       </main>
-      <Footer />
+      <div className="mt-auto">
+        <Footer />
+      </div>
     </div>
   )
 }
