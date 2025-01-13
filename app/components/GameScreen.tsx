@@ -87,9 +87,16 @@ export default function GameScreen({
     if (finalScore > highScore) {
       setHighScore(finalScore)
       setShowHighScorePopup(true)
+      localStorage.setItem('highScore', finalScore.toString())
     }
     
     onGameOver(finalScore)
+  }
+
+  const resetScore = () => {
+    setHighScore(0)
+    localStorage.setItem('highScore', '0')
+    setShowHighScorePopup(false)
   }
 
   if (isGameOver) {
@@ -115,6 +122,12 @@ export default function GameScreen({
             className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#0f3460] text-[#f1f1f1] rounded-full text-base sm:text-lg font-semibold hover:bg-[#16213e] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Home
+          </button>
+          <button
+            onClick={resetScore}
+            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#d90429] text-[#f1f1f1] rounded-full text-base sm:text-lg font-semibold hover:bg-[#ef233c] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
+            Reset Score
           </button>
         </div>
       </div>
