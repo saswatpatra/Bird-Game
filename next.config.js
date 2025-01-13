@@ -21,6 +21,14 @@ const nextConfig = {
       }
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/documentation',
+        destination: '/documentation/page',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
