@@ -5,12 +5,32 @@ export default function Documentation() {
   return (
     <div className="min-h-screen flex flex-col bg-[#f4f1de]">
       <Header />
-      <main className="flex-grow flex flex-col items-center justify-start pt-8 px-4 pb-6">
-        <h1 className="text-4xl sm:text-5xl font-bold mt-4 mb-4 text-[#3d405b] text-center">Documentation</h1>
-        <p className="text-lg sm:text-xl mb-6 text-[#3d405b] text-center max-w-2xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur
-          interdum, nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc. Sed euismod, nisi vel
-          consectetur interdum, nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc.
+      <main className="flex-grow flex flex-col pt-8 px-4 sm:px-8 md:px-16 lg:px-24 pb-6">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-[#3d405b]">Documentation</h1>
+        
+        <p className="text-lg text-[#3d405b] mb-8">
+          "Bird Tap Game" has been inspired by a very popular children's game in
+          India, known as "Chidiya Udd". The original game involves players sitting
+          in circles where one person acts as a leader and says "Chidiya Udd"
+          while raising their finger. The others must raise their fingers quickly
+          if the named thing can fly (like a bird). If the leader says something that
+          cannot fly (like "Dog Udd") and a player raises their finger, they lose.
+        </p>
+
+        <h2 className="text-3xl font-bold mb-4 text-[#3d405b]">How to play</h2>
+        <p className="text-lg text-[#3d405b] mb-8">
+          To play this game, click on the "Start Game" button, wait for the countdown and 
+          then some random words would be coming up, in which some would be bird names.
+          Click on the "Bird" button within 2 seconds when a bird name comes up to count a score.
+          If you click on the "Bird" button on some non-bird names, then the game would end.
+          Also, if could not click on the "Bird" button within 2 seconds when a bird name
+          shows up then the game ends.
+        </p>
+
+        <h2 className="text-3xl font-bold mb-4 text-[#3d405b]">Credits</h2>
+        <p className="text-lg text-[#3d405b]">
+          This game was developed by Saswat Patra using v0 whose source files can be found by clicking on "Github"
+          button on header
         </p>
       </main>
       <div className="mt-auto">
