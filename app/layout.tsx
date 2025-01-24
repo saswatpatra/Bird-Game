@@ -18,6 +18,7 @@ export const metadata: Metadata = {
         url: "https://birdtap.vercel.app/og-image.png",
         width: 1200,
         height: 630,
+        alt: "Bird Tap Game - A fun reflex testing game",
       },
     ],
     locale: "en_US",
