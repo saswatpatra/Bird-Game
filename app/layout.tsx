@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Bird Tap Game",
     images: [
       {
-        url: "https://birdtap.vercel.app/og-image.jpg",
+        url: "https://birdtap.vercel.app/og-image.png",
         width: 1200,
         height: 630,
       },
