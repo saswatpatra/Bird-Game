@@ -92,10 +92,10 @@ export default function GameScreen({
       setShowConfetti(true)
       localStorage.setItem("highScore", finalScore.toString())
 
-      // Reset confetti after animation
+      // Reset confetti after animation (increased to 8 seconds)
       setTimeout(() => {
         setShowConfetti(false)
-      }, 4000)
+      }, 8000)
     }
 
     onGameOver(finalScore)
@@ -165,3 +165,4 @@ export default function GameScreen({
     </div>
   )
 }
+
