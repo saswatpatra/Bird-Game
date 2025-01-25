@@ -1,11 +1,21 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link"
+import Image from "next/image"
 
 export default function Header() {
   return (
     <header className="flex justify-between items-center p-3 h-16 bg-[#3d405b] text-[#ffffff] shadow-lg">
-      <Link href="/" className="text-xl font-extrabold tracking-wider hover:text-[#ffffff] transition-colors">
-        Bird Tap Game
+      <Link
+        href="/"
+        className="flex items-center gap-2 text-xl font-extrabold tracking-wider hover:text-[#ffffff] transition-colors"
+      >
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-rJS9kDybdiTqzqm8poOYOFx9lH92AN.png"
+          alt="Bird Logo"
+          width={40}
+          height={40}
+          className="w-15 h-15"
+        />
+        <span>Bird Tap Game</span>
       </Link>
       <a
         href="https://github.com/saswatpatra/Chidiya-Udd"
