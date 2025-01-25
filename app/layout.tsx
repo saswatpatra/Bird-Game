@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Bird Tap Game",
   description: "Digital version of the infamous Chidiya Udd game",
+  metadataBase: new URL("https://birdtap.vercel.app"),
   openGraph: {
     title: "Bird Tap Game",
     description: "Digital version of the infamous Chidiya Udd game",
@@ -24,12 +25,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bird Tap Game",
+    description: "Digital version of the infamous Chidiya Udd game",
+    images: ["https://birdtap.vercel.app/og-image.png"],
+  },
   icons: {
-    icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/insta%20dp%20(1)-yFqQWtusAztzvehNnpL21qmjqytbXa.png",
-    shortcut:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/insta%20dp%20(1)-yFqQWtusAztzvehNnpL21qmjqytbXa.png",
-    apple:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/insta%20dp%20(1)-yFqQWtusAztzvehNnpL21qmjqytbXa.png",
+    icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-rJS9kDybdiTqzqm8poOYOFx9lH92AN.png",
+    shortcut: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-rJS9kDybdiTqzqm8poOYOFx9lH92AN.png",
+    apple: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-rJS9kDybdiTqzqm8poOYOFx9lH92AN.png",
   },
 }
 
@@ -45,7 +50,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
-          href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/insta%20dp%20(1)-yFqQWtusAztzvehNnpL21qmjqytbXa.png"
+          href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-rJS9kDybdiTqzqm8poOYOFx9lH92AN.png"
         />
       </head>
       <body>
