@@ -16,23 +16,27 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme")
     setIsDark(savedTheme === "dark")
+
+    const root = document.documentElement
+    if (savedTheme === "dark") {
+      root.classList.add("dark")
+    } else {
+      root.classList.remove("dark")
+    }
   }, [])
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const root = window.document.documentElement
-      if (isDark) {
+  const toggleTheme = () => {
+    setIsDark((prev) => {
+      const newTheme = !prev
+      localStorage.setItem("theme", newTheme ? "dark" : "light")
+      const root = document.documentElement
+      if (newTheme) {
         root.classList.add("dark")
-        localStorage.setItem("theme", "dark")
       } else {
         root.classList.remove("dark")
-        localStorage.setItem("theme", "light")
       }
-    }
-  }, [isDark])
-
-  const toggleTheme = () => {
-    setIsDark(!isDark)
+      return newTheme
+    })
   }
 
   return <ThemeContext.Provider value={{ isDark, toggleTheme }}>{children}</ThemeContext.Provider>
