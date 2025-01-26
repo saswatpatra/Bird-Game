@@ -14,6 +14,7 @@
     "next": "^13.4.19",
     "@vercel/speed-insights": "^1.0.1",
     "lucide-react": "^0.263.1"
+    "canvas-confetti": "^1.6.0"
   },
   "devDependencies": {
     "@types/node": "^20.5.0",
