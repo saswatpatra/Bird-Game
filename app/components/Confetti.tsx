@@ -55,4 +55,3 @@ export default function Confetti({ isActive }: ConfettiProps) {
 
   return null
 }
-
