@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react"
 
 interface CountdownScreenProps {
   onCountdownEnd: () => void
@@ -19,8 +19,8 @@ export default function CountdownScreen({ onCountdownEnd }: CountdownScreenProps
   }, [count, onCountdownEnd])
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="text-8xl font-bold text-[#3d405b] animate-bounce">
+    <div className="flex items-center justify-center bg-transparent h-full">
+      <div className="text-8xl font-bold text-[#3d405b] dark:text-yellow-400 animate-bounce transition-colors">
         {count}
       </div>
     </div>
