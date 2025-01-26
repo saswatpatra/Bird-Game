@@ -17,7 +17,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const savedTheme = localStorage.getItem("theme")
     setIsDark(savedTheme === "dark")
 
-    const root = document.documentElement
+    const root = window.document.documentElement
     if (savedTheme === "dark") {
       root.classList.add("dark")
     } else {
@@ -29,7 +29,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setIsDark((prev) => {
       const newTheme = !prev
       localStorage.setItem("theme", newTheme ? "dark" : "light")
-      const root = document.documentElement
+      const root = window.document.documentElement
       if (newTheme) {
         root.classList.add("dark")
       } else {
