@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3d405b] text-white py-2 px-4 border-t border-[#577590]">
+    <footer className="bg-[#3d405b] dark:bg-[#2d3748] text-white py-2 px-4 border-t border-[#577590] dark:border-[#4a5568] transition-colors duration-200">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
         <div className="text-sm sm:text-base order-2 sm:order-1">
-          With ❤️{' '}
+          With ❤️{" "}
           <Link
             href="https://saswatpatra.carrd.co/"
             target="_blank"
@@ -17,10 +17,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="text-sm sm:text-base order-3 sm:order-2">
-          <Link
-            href="/documentation"
-            className="underline hover:text-[#fee440] transition-colors"
-          >
+          <Link href="/documentation" className="underline hover:text-[#fee440] transition-colors">
             Documentation
           </Link>
         </div>
