@@ -74,7 +74,9 @@ export default function GameContainer() {
         ></div>
       )}
       <div
-        className={`relative ${gameState === "playing" || gameState === "gameOver" ? "dark:shadow-[0_0_50px_15px_rgba(255,215,0,0.15)]" : ""} rounded-lg transition-shadow duration-300`}
+        className={`relative ${
+          gameState === "playing" || gameState === "gameOver" ? "dark:shadow-[0_0_50px_15px_rgba(255,215,0,0.15)]" : ""
+        } rounded-lg transition-shadow duration-300`}
       >
         {gameState === "home" && <HomeScreen onStartGame={startGame} />}
         {gameState === "countdown" && <CountdownScreen onCountdownEnd={startPlaying} />}
