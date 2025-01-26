@@ -15,7 +15,7 @@ export default function GameContainer() {
   useEffect(() => {
     const storedHighScore = localStorage.getItem("highScore")
     if (storedHighScore) {
-      setHighScore(Number.parseInt(storedHighScore, 10))
+      setHighScore(Number(storedHighScore))
     }
   }, [])
 
@@ -62,17 +62,7 @@ export default function GameContainer() {
 
   return (
     <div className="relative">
-      {(gameState === "playing" || gameState === "gameOver") && (
-        <div
-          className="absolute inset-0 dark:bg-gradient-radial dark:from-yellow-600/30 dark:to-transparent dark:blur-xl dark:opacity-70 transition-opacity duration-300"
-          aria-hidden="true"
-        ></div>
-      )}
-      <div
-        className={`relative ${
-          gameState === "playing" || gameState === "gameOver" ? "dark:shadow-[0_0_50px_15px_rgba(255,215,0,0.15)]" : ""
-        } rounded-lg transition-shadow duration-300`}
-      >
+      <div className="relative rounded-lg transition-shadow duration-300">
         {gameState === "home" && <HomeScreen onStartGame={startGame} />}
         {gameState === "countdown" && <CountdownScreen onCountdownEnd={startPlaying} />}
         {(gameState === "playing" || gameState === "gameOver") && (
