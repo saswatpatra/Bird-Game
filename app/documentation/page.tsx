@@ -26,7 +26,8 @@ export default function Documentation() {
           To play this game, click on the "Start Game" button, wait for the countdown and then some random words would
           be coming up, in which some would be bird names. Click on the "Bird" button within 2 seconds when a bird name
           comes up to count a score. If you click on the "Bird" button on some non-bird names, then the game would end.
-          Also, if could not click on the "Bird" button within 2 seconds when a bird name shows up then the game ends.
+          Also, if you could not click on the "Bird" button within 2 seconds when a bird name shows up then the game
+          ends.
         </p>
 
         <h2 className="text-3xl font-bold mb-4 text-[#3d405b] dark:text-[#FFFFFF]">Credits</h2>
