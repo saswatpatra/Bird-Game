@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: "standalone",
   images: {
     domains: ["hebbkx1anhila5yf.public.blob.vercel-storage.com", "github.githubassets.com"],
     remotePatterns: [
