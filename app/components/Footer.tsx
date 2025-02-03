@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-primary dark:bg-gray-900 text-white py-2 px-4 transition-colors duration-200">
+    <footer className="bg-[#3d405b] dark:bg-[#2d3748] text-white py-2 px-4 transition-colors duration-200 dark:border-t dark:border-white">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
         <div className="text-sm sm:text-base order-2 sm:order-1">
           With ❤️{" "}
@@ -11,13 +11,13 @@ export default function Footer() {
             href="https://saswatpatra.carrd.co/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-accent transition-colors"
+            className="underline hover:text-[#fee440] transition-colors"
           >
             Saswat Patra
           </Link>
         </div>
         <div className="text-sm sm:text-base order-3 sm:order-2">
-          <Link href="/documentation" className="underline hover:text-accent transition-colors">
+          <Link href="/documentation" className="underline hover:text-[#fee440] transition-colors">
             Documentation
           </Link>
         </div>
@@ -35,4 +35,3 @@ export default function Footer() {
     </footer>
   )
 }
-
