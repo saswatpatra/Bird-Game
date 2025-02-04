@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3d405b] dark:bg-[#2d3748] text-white py-2 px-4 transition-colors duration-200 dark:border-t dark:border-white">
+    <footer className="bg-[#3d405b] dark:bg-[#1E1E1E] text-white py-2 px-4 transition-colors duration-200 dark:border-t dark:border-white">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
         <div className="text-sm sm:text-base order-2 sm:order-1">
           With ❤️{" "}
@@ -35,3 +35,4 @@ export default function Footer() {
     </footer>
   )
 }
+
