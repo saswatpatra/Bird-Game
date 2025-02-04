@@ -37,6 +37,8 @@ export default function GameScreen({
   const [streak, setStreak] = useState(0)
   const [bonusMultiplier, setBonusMultiplier] = useState(1)
   const [showBonusAnimation, setShowBonusAnimation] = useState(false)
+  const [isShaking, setIsShaking] = useState(false)
+  const [wordKey, setWordKey] = useState(0) // For fade animation
   const lastWordRef = useRef("")
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const { isDark } = useTheme()
@@ -52,6 +54,7 @@ export default function GameScreen({
     setWord(newWord)
     setIsBirdWord(isBird)
     lastWordRef.current = newWord
+    setWordKey((prev) => prev + 1) // Trigger fade animation
   }, [])
 
   const handleGameOver = useCallback(() => {
@@ -111,6 +114,8 @@ export default function GameScreen({
       if (timerRef.current) clearTimeout(timerRef.current)
       generateWord()
     } else {
+      setIsShaking(true)
+      setTimeout(() => setIsShaking(false), 400) // Match shake animation duration
       handleGameOver()
     }
   }, [isGameOver, isBirdWord, streak, bonusMultiplier, generateWord, handleGameOver, setScore])
@@ -142,19 +147,19 @@ export default function GameScreen({
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <button
             onClick={onPlayAgain}
-            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#55a630] text-white rounded-full text-base sm:text-lg font-semibold hover:bg-[#008000] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap"
+            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#55a630] text-white rounded-full text-base sm:text-lg font-semibold hover:bg-[#008000] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap active:scale-95"
           >
             Play Again
           </button>
           <button
             onClick={goToHome}
-            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#0f3460] text-white rounded-full text-base sm:text-lg font-semibold hover:bg-[#0f3460] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#0f3460] text-white rounded-full text-base sm:text-lg font-semibold hover:bg-[#0f3460] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
           >
             Home
           </button>
           <button
             onClick={resetScore}
-            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#d90429] text-white rounded-full text-base sm:text-lg font-semibold hover:bg-[#ef233c] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="w-full sm:w-auto px-4 sm:px-6 py-3 bg-[#d90429] text-white rounded-full text-base sm:text-lg font-semibold hover:bg-[#ef233c] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
           >
             Reset Score
           </button>
@@ -168,14 +173,18 @@ export default function GameScreen({
       className={`bg-[#16213e] ${isDark ? "dark" : ""} bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-8 shadow-lg text-center relative`}
     >
       <BonusAnimation isVisible={showBonusAnimation} bonusLevel={bonusMultiplier} />
-      <h2 className="text-4xl font-semibold mb-6 text-[#ffd700]">{word}</h2>
+      <h2 key={wordKey} className="text-4xl font-semibold mb-6 text-[#ffd700] word-fade-in">
+        {word}
+      </h2>
       <p className="text-2xl mb-8 text-white">
         Score: <span className="text-[#ffd700] font-semibold">{score}</span>
         {bonusMultiplier > 1 && <span className="text-[#ffd700] font-semibold ml-2">(x{bonusMultiplier} Bonus)</span>}
       </p>
       <button
         onClick={handleBirdClick}
-        className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#fee440] text-[#16213e] rounded-full text-lg font-semibold hover:bg-[#ffd700] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4"
+        className={`w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#fee440] text-[#16213e] rounded-full text-lg font-semibold hover:bg-[#ffd700] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4 active:scale-95 ${
+          isShaking ? "button-shake" : ""
+        }`}
       >
         Bird
       </button>
@@ -185,3 +194,4 @@ export default function GameScreen({
     </div>
   )
 }
+
