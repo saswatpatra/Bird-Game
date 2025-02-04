@@ -129,7 +129,7 @@ export default function GameScreen({
   if (isGameOver) {
     return (
       <div
-        className={`bg-[#16213e] ${isDark ? "dark" : ""} bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-8 shadow-lg text-center relative`}
+        className={`${isDark ? "bg-[#1E1E1E]" : "bg-[#16213e] bg-opacity-80"} backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-8 shadow-lg text-center relative`}
       >
         <Confetti isActive={showConfetti} />
         {showHighScorePopup && (
@@ -170,7 +170,7 @@ export default function GameScreen({
 
   return (
     <div
-      className={`bg-[#16213e] ${isDark ? "dark" : ""} bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-8 shadow-lg text-center relative`}
+      className={`${isDark ? "bg-[#1E1E1E]" : "bg-[#16213e] bg-opacity-80"} backdrop-filter backdrop-blur-sm rounded-lg p-4 sm:p-8 shadow-lg text-center relative`}
     >
       <BonusAnimation isVisible={showBonusAnimation} bonusLevel={bonusMultiplier} />
       <h2 key={wordKey} className="text-4xl font-semibold mb-6 text-[#ffd700] word-fade-in">
